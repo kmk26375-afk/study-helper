@@ -1,20 +1,42 @@
 # Study Helper
 
-## Run the website (React)
-    npm install
-    npm run dev
+Diploma students ke liye ek study website: branch aur semester ke hisaab se notes, lecture videos aur purane question papers.
 
-## Run the backend (Node + MongoDB)
-Needs MongoDB running locally (or a MongoDB Atlas link).
+## Features
+- Branch-wise (Computer, Civil, Electrical, Electronics, Mechanical, Chemical) aur semester-wise (1-6) subjects
+- Subject-wise notes
+- Lecture videos (YouTube)
+- Student registration (name, class, roll number, email)
+- Question paper PDF upload aur dekhna (branch, semester, year ke hisaab se)
+- About section
 
-    cd server
-    npm install
-    copy .env.example to .env  (set MONGODB_URI and ADMIN_KEY)
-    npm start
+## Tech Stack
+React (Vite), Node.js, MongoDB
 
-The site runs on http://localhost:5173 and the backend on http://localhost:5000.
+## Project Chalane Ke Steps
 
-## Edit your content
-- src/data.js: subjects and YouTube videos
-- src/About.jsx: your Instagram and Facebook links
-- Notes and papers: use "Add a note or paper (owner only)" at the bottom of the Notes or Papers page with your ADMIN_KEY
+1. Repo download karo:
+```
+git clone https://github.com/kmk26375-afk/study-helper.git
+cd study-helper
+```
+
+2. Frontend:
+```
+npm install
+npm run dev
+```
+Browser mein `http://localhost:5173` kholo.
+
+3. Backend (naye terminal mein):
+```
+cd server
+npm install
+```
+`.env.example` ko copy karke `.env` banao aur apni MongoDB details daalo. Phir:
+```
+node index.js
+```
+
+## Banane Wala
+Mohit, Diploma Computer Engineering (HSBTE)

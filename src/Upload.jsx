@@ -7,7 +7,11 @@ export default function Upload() {
   const [f, setF] = useState({ type: "paper", branch: "Computer", semester: 3, subject: "", year: YEARS[0], title: "", adminKey: "" });
   const [file, setFile] = useState(null);
   const [msg, setMsg] = useState("");
-  const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
+  const set = (k) => (e) => {
+  const next = { ...f, [k]: e.target.value };
+  if (k === "branch" || k === "semester") next.subject = "";
+  setF(next);
+};
   const subjects = subjectsFor(f.branch, Number(f.semester));
 
   async function submit(e) {
